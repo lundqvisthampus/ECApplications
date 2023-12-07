@@ -1,7 +1,9 @@
 ﻿using ECConsoleApp.Models;
 
 namespace ECConsoleApp.Services;
-
+/// <summary>
+/// Different methods used for managing the contactList.
+/// </summary>
 public class ContactService
 {
     private List<Contact> contactList = new();

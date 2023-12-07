@@ -2,7 +2,9 @@
 using System.ComponentModel.Design;
 
 namespace ECConsoleApp.Services;
-
+/// <summary>
+/// Lets the user create a contact, and add it to the list in ContactService.
+/// </summary>
 public class ContactCreateService
 {
 
@@ -70,6 +72,8 @@ public class ContactCreateService
             {
                 Console.WriteLine("Invalid input, try again.");
             }
+
+            // Tries to convert string to int, if it fails, the error message will appear. Otherwise it adds the phonenumber to the contact.
             else if (!int.TryParse(phoneNumberInput, out int phoneNumber))
             {
                 Console.WriteLine("Invalid input, try again.");
@@ -95,6 +99,7 @@ public class ContactCreateService
                 Console.WriteLine("Invalid input, try again.");
             }
         }
+            // Adds the contact created above, to the list in ContactService using the AddContact method.
            contactService.AddContact(contact);
     }
 }

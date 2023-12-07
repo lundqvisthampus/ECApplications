@@ -1,5 +1,5 @@
 ﻿using ECConsoleApp.Interfaces;
-
+/// Contact class, using the IContact interface as a "contract".
 namespace ECConsoleApp.Models;
 
 public class Contact : IContact
