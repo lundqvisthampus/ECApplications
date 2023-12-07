@@ -1,4 +1,5 @@
 ﻿namespace ECConsoleApp.Interfaces;
+
 /// <summary>
 /// Interface for the contact class.
 /// </summary>

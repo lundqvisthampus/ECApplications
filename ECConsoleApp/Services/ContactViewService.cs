@@ -1,4 +1,5 @@
 ﻿namespace ECConsoleApp.Services;
+
 /// <summary>
 ///  Lets the user view all contacts or more specific info about a single contact from the list in ContactService.
 /// </summary>
@@ -50,7 +51,7 @@ public class ContactViewService
 
     public void ViewSingleContact()
     {
-        Console.WriteLine("Please enter the email of the contact you want to view.");
+        Console.WriteLine("\nPlease enter the email of the contact you want to view.");
         Console.Write("Email: ");
         string contactEmail = Console.ReadLine()!;
         if (!string.IsNullOrEmpty(contactEmail))

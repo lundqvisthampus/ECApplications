@@ -1,14 +1,14 @@
 ﻿namespace ECConsoleApp.Services;
 
+/// <summary>
+/// Lets the user choose an option from the main menu. 
+/// If the user input is not an empty string or null, the program moves on as expected.
+/// If the input is an empty string or null, an error message will appear.
+/// </summary>
+/// 
+
 public class MenuService
 {
-    /// <summary>
-    /// Lets the user choose an option from the main menu. 
-    /// If the user input is not an empty string or null, the program moves on as expected.
-    /// If the input is an empty string or null, an error message will appear.
-    /// </summary>
-    /// 
-
     private readonly ContactService contactService;
 
     public MenuService(ContactService _contactService)

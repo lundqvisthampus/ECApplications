@@ -1,7 +1,9 @@
 ﻿namespace ECConsoleApp.Services;
+
 /// <summary>
 /// Lets the user remove a contact from the list in ContactService.
 /// </summary>
+/// 
 public class ContactRemoveService
 {
     private readonly ContactService contactService;

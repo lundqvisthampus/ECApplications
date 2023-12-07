@@ -2,6 +2,7 @@
 using System.ComponentModel.Design;
 
 namespace ECConsoleApp.Services;
+
 /// <summary>
 /// Lets the user create a contact, and add it to the list in ContactService.
 /// </summary>
