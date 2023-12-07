@@ -19,12 +19,13 @@ public class MenuService
     public void ShowMenu()
     {
         ContactCreateService contactCreate = new ContactCreateService(contactService);
+        ContactViewService contactView = new ContactViewService(contactService);
 
         while (true)
         {
             Console.WriteLine("   ----- #####  MENU  ##### -----   ");
             Console.WriteLine("Choose one of the following options:");
-            Console.WriteLine("1. Add new contact to list.");
+            Console.WriteLine("\n1. Add new contact to list.");
             Console.WriteLine("2. View all contacts in list.");
             Console.WriteLine("4. View specific contact in list.");
             Console.WriteLine("4. Remove a contact from list.");
@@ -42,6 +43,15 @@ public class MenuService
                         Console.Clear();
                         Console.WriteLine("Contact added!");
                         Console.WriteLine();
+                        break;
+
+                    case "2":
+                        Console.Clear();
+                        Console.WriteLine("### ALL CONTACTS IN LIST ###");
+                        Console.WriteLine();
+                        contactView.ViewAllContacts();
+                        Console.WriteLine("\nPress any key to continue.");
+                        Console.ReadKey();
                         break;
                 }
         }
