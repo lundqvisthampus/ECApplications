@@ -1,6 +1,6 @@
 ﻿namespace ECConsoleApp.Interfaces;
 
-internal interface IContact
+public interface IContact
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
