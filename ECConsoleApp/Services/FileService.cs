@@ -3,21 +3,22 @@ using System.Diagnostics;
 
 namespace ECConsoleApp.Services;
 
-/// <summary>
-/// Methods for manageing the getting/saving of the contactlist to a json formated file.
-/// </summary>
-
 public class FileService : IFileService
 {
     private readonly string _filePath;
 
+    /// <summary>
+    /// Constructor that takes the string filePath as an argument.
+    /// </summary>
     public FileService(string filePath)
     {
         _filePath = filePath;
     }
 
-    // Checks if user has the directory path (_filePath), if not, it will be created.
-    // Then saves the content to file.
+    /// <summary>
+    /// Method that checks if the user has a directory with the path of _filePath, if not it will be created.
+    /// Then tries to use StreamWriter to save the content to the correct filepath. If failed, it will write out an exception.
+    /// </summary>
     public bool SaveContentToFile(string content)
     {
         try
@@ -38,7 +39,9 @@ public class FileService : IFileService
         return false;
     }
 
-    // Using streamreader to get the content from a file.
+    /// <summary>
+    /// Method that tries to get the content from filepath if the file exists.. If failed, it will write out an exception.
+    /// </summary>
     public string GetContentFromFile()
     {
         try

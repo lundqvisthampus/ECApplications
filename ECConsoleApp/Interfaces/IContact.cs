@@ -1,7 +1,7 @@
 ﻿namespace ECConsoleApp.Interfaces;
 
 /// <summary>
-/// Interface for the contact class.
+/// Interface for the contact class. "Contract" that the class has to follow.
 /// </summary>
 public interface IContact
 {

@@ -1,19 +1,23 @@
 ﻿namespace ECConsoleApp.Services;
 
-/// <summary>
-///  Lets the user view all contacts or more specific info about a single contact from the list in ContactService.
-/// </summary>
 public class ContactViewService
 {
+    /// <summary>
+    /// Constructor that revieves contactService as an argument, 
+    /// implemented so it avoids creating a new instance of the contactService when method from that class is called.
+    /// </summary>
     private readonly ContactService contactService;
     public ContactViewService(ContactService _contactService)
     {
         contactService = _contactService;
     }
 
+    /// <summary>
+    /// Method that uses a foreach loop to go through all contacts in the list from the GetContactList method.
+    /// Also lets the user view aditional details about a user by entering "y". Then the ViewSingleContact method will be called.
+    /// </summary>
     public void ViewAllContacts()
     {
-        // Loops through all the contacts in the list in ContactService.
         foreach(var contact in contactService.GetContactList())
         {
             Console.WriteLine($"{contact.FirstName} {contact.LastName}");
@@ -49,6 +53,11 @@ public class ContactViewService
         }
     }
 
+    /// <summary>
+    /// Lets the user view aditional information about a contact by entering the contacts email.
+    /// If the user input is not an empty string or null, the GetContactList method gets called to get the list, 
+    /// and the Find method to get the matching contact with email.
+    /// </summary>
     public void ViewSingleContact()
     {
         Console.WriteLine("\nPlease enter the email of the contact you want to view.");
@@ -56,7 +65,6 @@ public class ContactViewService
         string contactEmail = Console.ReadLine()!;
         if (!string.IsNullOrEmpty(contactEmail))
         {
-            // Using a "find" method to search for a contact in the list in ContactService by using email.
             var findContact = contactService.GetContactList().Find(contact => contact.Email == contactEmail);
             if (findContact != null)
             {

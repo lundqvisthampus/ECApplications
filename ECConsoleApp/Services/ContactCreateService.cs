@@ -3,18 +3,24 @@ using System.ComponentModel.Design;
 
 namespace ECConsoleApp.Services;
 
-/// <summary>
-/// Lets the user create a contact, and add it to the list in ContactService.
-/// </summary>
 public class ContactCreateService
 {
 
+    /// <summary>
+    /// Constructor that revieves contactService as an argument, 
+    /// implemented so it avoids creating a new instance of the contactService when method from that class is called.
+    /// </summary>
     private readonly ContactService contactService;
-
     public ContactCreateService(ContactService _contactService)
     {
         contactService = _contactService;
     }
+
+    /// <summary>
+    /// Function that creates a new contact of the contact class. 
+    /// Lets the user set the properties of contact, as long as the input is not null or an empty string.
+    /// If the input IsNullOrEmpty, the user will get another try at the input. If not, the loop will break and continue onto the next while-loop.
+    /// </summary>
     public void Add()
     {
         Contact contact = new Contact();
@@ -74,7 +80,7 @@ public class ContactCreateService
                 Console.WriteLine("Invalid input, try again.");
             }
 
-            // Tries to convert string to int, if it fails, the error message will appear. Otherwise it adds the phonenumber to the contact.
+            /// Tries to convert the input string to an int. If the input is a letter (a-ö). It will run the loop again until a number is added instead.
             else if (!int.TryParse(phoneNumberInput, out int phoneNumber))
             {
                 Console.WriteLine("Invalid input, try again.");
@@ -100,7 +106,8 @@ public class ContactCreateService
                 Console.WriteLine("Invalid input, try again.");
             }
         }
-            // Adds the contact created above, to the list in ContactService using the AddContact method.
+            /// Adds the contact created above, to the list in ContactService using the AddContact method.
+            /// Also saves it as Json to a file.
            contactService.AddContact(contact);
     }
 }

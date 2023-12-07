@@ -5,15 +5,18 @@ using System.Diagnostics;
 namespace ECConsoleApp.Services;
 
 /// <summary>
-/// Different methods used for managing the list of contacts and also saving it to json formated file..
+/// Field with a filepath passed as an argument and initializing a new Fileservice.
 /// </summary>
 public class ContactService
 {
     private readonly FileService fileService = new FileService(@"C:\Coding\EC-code\CSharp\ECApplications\ECConsoleApp\Contactlist.json");
     private List<Contact> contactList = new();
 
-    // Adding the contact to contactList.
-    // Converting the list to Json, and using SaveContentToFile to save it.
+
+    /// <summary>
+    /// Method that tries to add the contact to contactList when called.
+    /// Also tries to convert the contactlist to Json and calls the SaveContentToFile method to save.
+    /// </summary>
     public void AddContact(Contact contact)
     {
         try
@@ -24,7 +27,9 @@ public class ContactService
         catch (Exception ex) { Debug.WriteLine(ex.Message); }
     }
 
-    // Deserializing the Json file to the contactList.
+    /// <summary>
+    /// Tries to use the GetContentFromFile method, if the file isnt an empty string or null, it converts the Jsonformated file to the contactList.
+    /// </summary>
     public List<Contact> GetContactList()
     {
         try
@@ -39,7 +44,10 @@ public class ContactService
         return contactList; 
     }
 
-    // Removing a contact from the list, and saving the updated list as Json.
+    /// <summary>
+    /// Removes contact from the contactList and also converts the list to Json and saves it to file using the
+    /// SaveContentToFile method.
+    /// </summary>
     public void RemoveContact(Contact contact)
     {
         contactList.Remove(contact);

@@ -1,24 +1,26 @@
 ﻿namespace ECConsoleApp.Services;
 
-/// <summary>
-/// Lets the user choose an option from the main menu. 
-/// If the user input is not an empty string or null, the program moves on as expected.
-/// If the input is an empty string or null, an error message will appear.
-/// </summary>
-/// 
-
 public class MenuService
 {
-    private readonly ContactService contactService;
+    /// <summary>
+    /// Constructor that revieves contactService as an argument, 
+    /// implemented so it avoids creating a new instance of the contactService when method from that class is called.
+    /// </summary>
 
+    private readonly ContactService contactService;
     public MenuService(ContactService _contactService)
     {
         contactService = _contactService;
     }
 
+    /// <summary>
+    /// Method that loops through the menu options. 
+    /// Using dependency injection to make sure that all services uses the same instance of contactService.
+    /// As long as the input is not empty, a switch based on the user input will be used.
+    /// Each case has different methods which will be called based on the user input.
+    /// </summary>
     public void ShowMenu()
     {
-        // Making sure that all services uses the same instance of ContactService.
         ContactCreateService contactCreateService = new ContactCreateService(contactService);
         ContactViewService contactViewService = new ContactViewService(contactService);
         ContactRemoveService contactRemoveService = new ContactRemoveService(contactService);
@@ -35,7 +37,6 @@ public class MenuService
             Console.Write("\nEnter option (number): ");
             string option = Console.ReadLine()!;
 
-            // Checks that the input is not an empty string or null.
             if (!string.IsNullOrEmpty(option))
                 switch (option)
                 {

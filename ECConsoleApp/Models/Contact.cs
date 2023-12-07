@@ -1,7 +1,9 @@
 ﻿using ECConsoleApp.Interfaces;
 namespace ECConsoleApp.Models;
 
-/// Contact class, using the IContact interface as a "contract".
+/// <summary>
+/// A class with properties implemented from the IContact interface.
+/// </summary>
 public class Contact : IContact
 {
     public string FirstName { get; set; } = null!;

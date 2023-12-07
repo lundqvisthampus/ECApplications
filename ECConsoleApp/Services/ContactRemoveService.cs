@@ -1,25 +1,30 @@
 ﻿namespace ECConsoleApp.Services;
 
-/// <summary>
-/// Lets the user remove a contact from the list in ContactService.
-/// </summary>
-/// 
 public class ContactRemoveService
 {
-    private readonly ContactService contactService;
 
+    /// <summary>
+    /// Constructor that revieves contactService as an argument, 
+    /// implemented so it avoids creating a new instance of the contactService when method from that class is called.
+    /// </summary>
+    private readonly ContactService contactService;
     public ContactRemoveService (ContactService _contactService)
     {
         contactService = _contactService;
     }
 
+
+    /// <summary>
+    /// Let's the user remove a contact from the list using email.
+    /// findContact uses GetContactList method to get the list, and the Find method to get the matching contact with email.
+    /// As long as findContact not is null, the contact will be removed from the list in contactService.
+    /// </summary>
     public void Remove()
     {
         Console.WriteLine("Enter email of the contact you want to remove from list");
         Console.Write("Email: ");
         string emailToRemove = Console.ReadLine()!;
 
-        // Using a "find" method to search for a contact in the list by email (user input).
         var findContact = contactService.GetContactList().Find(contact => contact.Email == emailToRemove);
         if (findContact != null)
         {
