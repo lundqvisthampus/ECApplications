@@ -19,9 +19,9 @@ public class MenuService
     public void ShowMenu()
     {
         // Making sure that all services uses the same instance of ContactService.
-        ContactCreateService contactCreate = new ContactCreateService(contactService);
-        ContactViewService contactView = new ContactViewService(contactService);
-        ContactRemoveService contactRemove = new ContactRemoveService(contactService);
+        ContactCreateService contactCreateService = new ContactCreateService(contactService);
+        ContactViewService contactViewService = new ContactViewService(contactService);
+        ContactRemoveService contactRemoveService = new ContactRemoveService(contactService);
 
         while (true)
         {
@@ -42,7 +42,7 @@ public class MenuService
                     case "1":
                         Console.Clear();
                         Console.WriteLine("### ADD NEW CONTACT ###");
-                        contactCreate.Add();
+                        contactCreateService.Add();
                         Console.Clear();
                         Console.WriteLine("Contact added!");
                         Console.WriteLine();
@@ -52,19 +52,19 @@ public class MenuService
                         Console.Clear();
                         Console.WriteLine("### ALL CONTACTS IN LIST ###");
                         Console.WriteLine();
-                        contactView.ViewAllContacts();
+                        contactViewService.ViewAllContacts();
                         break;
 
                     case "3":
                         Console.Clear();
                         Console.WriteLine("### VIEW SPECIFIC CONTACT IN LIST ###");
-                        contactView.ViewSingleContact();
+                        contactViewService.ViewSingleContact();
                         break;
 
                     case "4":
                         Console.Clear();
                         Console.WriteLine("### REMOVE A CONTACT FROM LIST ###");
-                        contactRemove.Remove();
+                        contactRemoveService.Remove();
                         break;
 
                     case "5":

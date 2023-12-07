@@ -36,7 +36,7 @@ public class ContactService
             }
         }
         catch (Exception ex) { Debug.WriteLine(ex.Message); }
-        return contactList;
+        return contactList; 
     }
 
     // Removing a contact from the list, and saving the updated list as Json.
