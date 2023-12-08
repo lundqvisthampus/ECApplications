@@ -1,4 +1,5 @@
-﻿using ECConsoleApp.Models;
+﻿using ECConsoleApp.Interfaces;
+using ECConsoleApp.Models;
 using System.ComponentModel.Design;
 
 namespace ECConsoleApp.Services;
@@ -10,7 +11,7 @@ public class ContactCreateService
     /// Constructor that revieves contactService as an argument, 
     /// implemented so it avoids creating a new instance of the contactService when method from that class is called.
     /// </summary>
-    private readonly ContactService contactService;
+    private readonly IContactService contactService;
     public ContactCreateService(ContactService _contactService)
     {
         contactService = _contactService;

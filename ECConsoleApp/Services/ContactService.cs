@@ -1,4 +1,5 @@
-﻿using ECConsoleApp.Models;
+﻿using ECConsoleApp.Interfaces;
+using ECConsoleApp.Models;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
@@ -7,7 +8,7 @@ namespace ECConsoleApp.Services;
 /// <summary>
 /// Field with a filepath passed as an argument and initializing a new Fileservice.
 /// </summary>
-public class ContactService
+public class ContactService : IContactService
 {
     private readonly FileService fileService = new FileService(@"C:\Coding\EC-code\CSharp\ECApplications\ECConsoleApp\Contactlist.json");
     private List<Contact> contactList = new();
