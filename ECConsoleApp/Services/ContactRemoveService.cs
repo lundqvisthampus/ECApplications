@@ -16,16 +16,17 @@ public class ContactRemoveService
 
     /// <summary>
     /// Let's the user remove a contact from the list using email.
-    /// findContact uses GetContactList method to get the list, and the Find method to get the matching contact with email.
+    /// findContact uses GetContactList method to get the list, and the Find method to get the matching contact with email. 
+    /// (using ToLower method, so it doesnt matter if the user input is in caps or not.)
     /// As long as findContact not is null, the contact will be removed from the list in contactService.
     /// </summary>
     public void Remove()
     {
         Console.WriteLine("Enter email of the contact you want to remove from list");
         Console.Write("Email: ");
-        string emailToRemove = Console.ReadLine()!;
+        string emailToRemove = Console.ReadLine()!.ToLower();
 
-        var findContact = contactService.GetContactList().Find(contact => contact.Email == emailToRemove);
+        var findContact = contactService.GetContactList().Find(contact => contact.Email.ToLower() == emailToRemove);
         if (findContact != null)
         {
             contactService.RemoveContact(findContact);

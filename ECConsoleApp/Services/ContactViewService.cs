@@ -56,16 +56,16 @@ public class ContactViewService
     /// <summary>
     /// Lets the user view aditional information about a contact by entering the contacts email.
     /// If the user input is not an empty string or null, the GetContactList method gets called to get the list, 
-    /// and the Find method to get the matching contact with email.
+    /// and the Find method to get the matching contact with email (using ToLower method, so it doesnt matter if the user input is in caps or not.)
     /// </summary>
     public void ViewSingleContact()
     {
         Console.WriteLine("\nPlease enter the email of the contact you want to view.");
         Console.Write("Email: ");
-        string contactEmail = Console.ReadLine()!;
+        string contactEmail = Console.ReadLine()!.ToLower();
         if (!string.IsNullOrEmpty(contactEmail))
         {
-            var findContact = contactService.GetContactList().Find(contact => contact.Email == contactEmail);
+            var findContact = contactService.GetContactList().Find(contact => contact.Email.ToLower() == contactEmail);
             if (findContact != null)
             {
                 Console.WriteLine($"\nFirstname: {findContact.FirstName}");
