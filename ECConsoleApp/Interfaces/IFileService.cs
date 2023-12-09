@@ -1,9 +1,9 @@
 ﻿namespace ECConsoleApp.Interfaces;
 
 /// <summary>
-/// Interface for the FileService class, which needs to be implemented in the FileService if it uses the interface.
+/// Interface for the FileService class. Everything in the interface needs to be implemented to the class, if it implements the IFileService.
 /// </summary>
-internal interface IFileService
+public interface IFileService
 {
     bool SaveContentToFile(string content);
     string GetContentFromFile();
