@@ -4,6 +4,7 @@ using ECGraphicApp.Models;
 using ECGraphicApp.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace ECGraphicApp.ViewModels;
 
@@ -38,5 +39,10 @@ public partial class ContactListViewModel : ObservableObject
         mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactEditViewModel>();
     }
 
-    
+    [RelayCommand]
+    private void RemoveContact(Contact contact)
+    {
+        _contactService.RemoveContact(contact);
+        ListOfContacts = new ObservableCollection<Contact>(_contactService.GetContactList());
+    }
 }

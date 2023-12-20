@@ -10,7 +10,7 @@ namespace ECGraphicApp.Services;
 /// </summary>
 public class ContactService : IContactService
 {
-    private readonly FileService fileService = new FileService(@"C:\Coding\EC-code\CSharp\ECApplications\ECConsoleApp\Contactlist.json");
+    private readonly FileService fileService = new FileService(@"C:\Coding\EC-code\CSharp\ECApplications\ECGraphicApp\Contactlist.json");
     private List<Contact> contactList = new();
 
 

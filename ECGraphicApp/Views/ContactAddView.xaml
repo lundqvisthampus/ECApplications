@@ -11,17 +11,10 @@
              
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
-    
-    
+
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Button Grid.Row="0" Content="Back to list" Command="{Binding NavigateToListCommand}" Margin="20" Padding="10"/>
-
-        <StackPanel Grid.Row="1">
+        <StackPanel Margin="0,5">
             <Label Content="First name:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.FirstName}" Margin="20,0,20,5" Padding="5"/>
 
@@ -37,7 +30,7 @@
             <Label Content="Address:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.Address}" Margin="20,0,20,5" Padding="5"/>
 
-            <Button Content="Save contact" Command="{Binding }" Margin="20" Padding="10"/>
+            <Button Content="Save contact" Command="{Binding SaveContactCommand}" Margin="20, 40" Padding="10"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ECGraphicApp.Views.ContactEditView"
+﻿<UserControl x:Class="ECGraphicApp.Views.ContactInfoView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
              
              xmlns:viewmodels="clr-namespace:ECGraphicApp.ViewModels"
              xmlns:models="clr-namespace:ECGraphicApp.Models"
-             d:DataContext="{d:DesignInstance Type=viewmodels:ContactEditViewModel}"
+             d:DataContext="{d:DesignInstance Type=viewmodels:ContactInfoViewModel}"
              
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
