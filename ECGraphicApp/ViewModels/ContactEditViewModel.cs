@@ -18,13 +18,13 @@ public partial class ContactEditViewModel : ObservableObject
     }
 
     [ObservableProperty]
-    private Contact _contact = new();
+    private Contact contact = new();
+
 
     [RelayCommand]
-    public void Save()
+    public void Update()
     {
-
-        _contactService.AddContact(Contact);
+        _contactService.UpdateContact(Contact);
 
         var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
         mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactListViewModel>();

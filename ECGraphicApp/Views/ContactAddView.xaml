@@ -10,24 +10,24 @@
              d:DataContext="{d:DesignInstance Type=viewmodels:ContactAddViewModel}"
              
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="400">
 
 
     <Grid>
-        <StackPanel Margin="0,5">
-            <Label Content="First name:" Margin="15,0"/>
+        <StackPanel Margin="0,30">
+            <Label FontSize="16" Content="First name:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.FirstName}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label Content="Last name:" Margin="15,0"/>
+            <Label FontSize="16" Content="Last name:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.LastName}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label Content="Email:" Margin="15,0"/>
+            <Label FontSize="16" Content="Email:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.Email}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label Content="Phone number:" Margin="15,0"/>
+            <Label FontSize="16" Content="Phone number:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.PhoneNumber}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label Content="Address:" Margin="15,0"/>
+            <Label FontSize="16" Content="Address:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.Address}" Margin="20,0,20,5" Padding="5"/>
 
             <Button Content="Save contact" Command="{Binding SaveContactCommand}" Margin="20, 40" Padding="10"/>

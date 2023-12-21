@@ -64,7 +64,15 @@ public class ContactService : IContactService
         }
         else
         {
-            return new Contact();
+            return null!;
         }
     }
+
+    public void UpdateContact(Contact contact)
+    {
+        var updateContact = contact;
+        AddContact(updateContact);
+        RemoveContact(contact);
+    }
+
 }
