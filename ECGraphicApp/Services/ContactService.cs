@@ -54,4 +54,17 @@ public class ContactService : IContactService
         contactList.Remove(contact);
         fileService.SaveContentToFile(JsonConvert.SerializeObject(contactList));
     }
+
+    public Contact ShowContactInfo(Contact contact)
+    {
+        var specificContact = contactList.FirstOrDefault(x => x.LastName == contact.LastName);
+        if (specificContact != null)
+        {
+            return specificContact;
+        }
+        else
+        {
+            return new Contact();
+        }
+    }
 }

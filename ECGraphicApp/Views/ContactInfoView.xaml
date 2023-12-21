@@ -8,10 +8,40 @@
              xmlns:viewmodels="clr-namespace:ECGraphicApp.ViewModels"
              xmlns:models="clr-namespace:ECGraphicApp.Models"
              d:DataContext="{d:DesignInstance Type=viewmodels:ContactInfoViewModel}"
-             
+
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
+    
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <TextBlock Text="First name: " />
+                <TextBlock Text="Last name: " />
+                <TextBlock Text="Address: " />
+                <TextBlock Text="Email: " />
+                <TextBlock Text="Phone number: " />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="{Binding Contact.FirstName}" />
+                <TextBlock Text="{Binding Contact.LastName}" />
+                <TextBlock Text="{Binding Contact.Address}" />
+                <TextBlock Text="{Binding Contact.Email}" />
+                <TextBlock Text="{Binding Contact.PhoneNumber}" />
+            </StackPanel>
+        </Grid>
+
+        <Button Grid.Row="0" Content="Back to list" Command="{Binding BackToListCommand}" Margin="20" Padding="10"/>
+
     </Grid>
 </UserControl>

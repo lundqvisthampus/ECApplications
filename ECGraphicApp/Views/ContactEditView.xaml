@@ -12,6 +12,24 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="300">
     <Grid>
+        <StackPanel Margin="0,30">
             
+            <Label Content="Update first name:" Margin="15,0"/>
+            <TextBox Text="{Binding Contact.FirstName}" Margin="20,0,20,5" Padding="5"/>
+
+            <Label Content="Update last name:" Margin="15,0"/>
+            <TextBox Text="{Binding Contact.LastName}" Margin="20,0,20,5" Padding="5"/>
+
+            <Label Content="Update email:" Margin="15,0"/>
+            <TextBox Text="{Binding Contact.Email}" Margin="20,0,20,5" Padding="5"/>
+
+            <Label Content="Update phone number:" Margin="15,0"/>
+            <TextBox Text="{Binding Contact.PhoneNumber}" Margin="20,0,20,5" Padding="5"/>
+
+            <Label Content="Update address:" Margin="15,0"/>
+            <TextBox Text="{Binding Contact.Address}" Margin="20,0,20,5" Padding="5"/>
+
+            <Button Content="Update and save" Command="{Binding SaveContactCommand}" Margin="20, 40" Padding="10"/>
+        </StackPanel>
     </Grid>
 </UserControl>

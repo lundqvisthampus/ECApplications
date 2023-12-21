@@ -25,7 +25,10 @@ public partial class App : Application
                 services.AddTransient<ContactListView>();
                 services.AddTransient<ContactAddViewModel>();
                 services.AddTransient<ContactAddView>();
-
+                services.AddSingleton<ContactInfoViewModel>();
+                services.AddSingleton<ContactInfoView>();
+                services.AddSingleton<ContactEditViewModel>();
+                services.AddSingleton<ContactEditView>();
             })
             .Build();
     }

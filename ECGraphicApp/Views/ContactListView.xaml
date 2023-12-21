@@ -36,8 +36,8 @@
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Button Content="View"/>
-                            <Button Content="Update" />
+                            <Button Content="Info" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateToInfoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Content="Update" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateEditCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
                             <Button Content="Remove" CommandParameter="{Binding .}" Command="{Binding DataContext.RemoveContactCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
                         </StackPanel>
                     </Grid>

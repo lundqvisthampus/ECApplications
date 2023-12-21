@@ -11,7 +11,6 @@ namespace ECGraphicApp.ViewModels;
 public partial class ContactListViewModel : ObservableObject
 {
     private readonly IServiceProvider _serviceProvider;
-
     private readonly ContactService _contactService;
 
     public ContactListViewModel(IServiceProvider serviceProvider, ContactService contactService)
@@ -33,10 +32,25 @@ public partial class ContactListViewModel : ObservableObject
     }
 
     [RelayCommand]
-    public void NavigateEdit() 
+    public void NavigateEdit(Contact contact) 
     {
         var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
+
+        var contactEditViewModel = _serviceProvider.GetRequiredService<ContactEditViewModel>();
+        contactEditViewModel.Contact = contact;
+
         mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactEditViewModel>();
+    }
+
+    [RelayCommand]
+    public void NavigateToInfo(Contact contact)
+    {
+        var mainViewModel = _serviceProvider.GetRequiredService<MainViewModel>();
+
+        var contactInfoViewModel = _serviceProvider.GetRequiredService<ContactInfoViewModel>();
+        contactInfoViewModel.Contact = contact;
+
+        mainViewModel.CurrentViewModel = _serviceProvider.GetRequiredService<ContactInfoViewModel>();
     }
 
     [RelayCommand]
