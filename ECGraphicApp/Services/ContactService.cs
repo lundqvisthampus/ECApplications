@@ -20,12 +20,19 @@ public class ContactService : IContactService
     /// </summary>
     public void AddContact(Contact contact)
     {
-        try
+        if (!string.IsNullOrWhiteSpace(contact.FirstName) && !string.IsNullOrWhiteSpace(contact.LastName) && !string.IsNullOrWhiteSpace(contact.Email))
         {
-            contactList.Add(contact);
-            fileService.SaveContentToFile(JsonConvert.SerializeObject(contactList));
+            try
+            {
+                contactList.Add(contact);
+                fileService.SaveContentToFile(JsonConvert.SerializeObject(contactList));
+            }
+            catch (Exception ex) { Debug.WriteLine(ex.Message); }
         }
-        catch (Exception ex) { Debug.WriteLine(ex.Message); }
+        else
+        {
+            Debug.WriteLine("Failed to update contact. Required fields are missing inputs");
+        }
     }
 
     /// <summary>
@@ -70,9 +77,18 @@ public class ContactService : IContactService
 
     public void UpdateContact(Contact contact)
     {
-        var updateContact = contact;
-        AddContact(updateContact);
-        RemoveContact(contact);
+
+        if (!string.IsNullOrWhiteSpace(contact.FirstName) && !string.IsNullOrWhiteSpace(contact.LastName) && !string.IsNullOrWhiteSpace(contact.Email))
+        {
+            var updatedContact = contact;
+
+            AddContact(updatedContact);
+            RemoveContact(contact);
+        }
+        else
+        {
+            Debug.WriteLine("Failed to update contact. Required fields are missing inputs");
+        }
     }
 
 }
