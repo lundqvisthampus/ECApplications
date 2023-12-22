@@ -19,7 +19,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Content="Add new contact" Command="{Binding NavigateToAddCommand}" Margin="20" Padding="10"/>
+        <Button Background="#8de398" Grid.Row="0" Content="Add new contact" Command="{Binding NavigateToAddCommand}" Margin="20" Padding="10"/>
 
         <ListView Grid.Row="1" ItemsSource="{Binding ListOfContacts}">
             <ListView.ItemTemplate>
@@ -36,9 +36,9 @@
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Button Padding="10,0" Margin="0,5,8,0" Content="Info" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateToInfoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
-                            <Button Padding="10,0" Margin="0,5,8,0" Content="Update" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateEditCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
-                            <Button Padding="10,0" Margin="0,5,14,0" Content="Remove" CommandParameter="{Binding .}" Command="{Binding DataContext.RemoveContactCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#8dcfe3" Padding="10,0" Margin="0,5,8,0" Content="Info" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateToInfoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#cce38d" Padding="10,0" Margin="0,5,8,0" Content="Edit" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateEditCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#e38e8d" Padding="10,0" Margin="0,5,14,0" Content="Remove" CommandParameter="{Binding .}" Command="{Binding DataContext.RemoveContactCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

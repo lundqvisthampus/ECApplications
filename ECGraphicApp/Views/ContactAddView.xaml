@@ -15,13 +15,13 @@
 
     <Grid>
         <StackPanel Margin="0,30">
-            <Label FontSize="16" Content="First name: (mandatory)" Margin="15,0"/>
+            <Label FontSize="16" Content="First name: (required)" Margin="15,0"/>
             <TextBox Text="{Binding Contact.FirstName}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label FontSize="16" Content="Last name: (mandatory)" Margin="15,0"/>
+            <Label FontSize="16" Content="Last name: (required)" Margin="15,0"/>
             <TextBox Text="{Binding Contact.LastName}" Margin="20,0,20,5" Padding="5"/>
 
-            <Label FontSize="16" Content="Email: (mandatory)" Margin="15,0"/>
+            <Label FontSize="16" Content="Email: (required)" Margin="15,0"/>
             <TextBox Text="{Binding Contact.Email}" Margin="20,0,20,5" Padding="5"/>
 
             <Label FontSize="16" Content="Phone number:" Margin="15,0"/>
@@ -30,7 +30,7 @@
             <Label FontSize="16" Content="Address:" Margin="15,0"/>
             <TextBox Text="{Binding Contact.Address}" Margin="20,0,20,5" Padding="5"/>
 
-            <Button Content="Save contact" Command="{Binding SaveContactCommand}" Margin="20, 40" Padding="10"/>
+            <Button Background="#8de398" Content="Save contact" Command="{Binding SaveContactCommand}" Margin="20, 40" Padding="10"/>
         </StackPanel>
     </Grid>
 </UserControl>

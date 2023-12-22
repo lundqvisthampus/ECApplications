@@ -37,7 +37,7 @@
 
         </StackPanel>
 
-        <Button  Grid.Row="0" Content="Back to list" Command="{Binding BackToListCommand}" Margin="20,20,20,50" Padding="10"/>
+        <Button Background="#8daae3"  Grid.Row="0" Content="Back to list" Command="{Binding BackToListCommand}" Margin="20,20,20,50" Padding="10"/>
 
     </Grid>
 </UserControl>
