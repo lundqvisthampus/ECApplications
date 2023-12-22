@@ -10,6 +10,9 @@ public partial class MainViewModel : ObservableObject
 
     private readonly IServiceProvider _serviceProvider;
 
+    /// <summary>
+    /// Sets the CurrentViewModel to ContactListViewModel, making it the "default" view.
+    /// </summary>
     public MainViewModel(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;

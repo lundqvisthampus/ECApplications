@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace ECConsoleApp.Services;
 
 /// <summary>
-/// Field with a filepath passed as an argument and initializing a new Fileservice.
+/// Initialacing a new instace of Fileservice with a filepath as parameter.
 /// </summary>
 public class ContactService : IContactService
 {
@@ -29,7 +29,7 @@ public class ContactService : IContactService
     }
 
     /// <summary>
-    /// Tries to use the GetContentFromFile method, if the file isnt an empty string or null, it converts the Jsonformated file to the contactList.
+    /// Tries to use the GetContentFromFile method and save it as "content" and if the file isnt an empty string or null, it converts the Jsonformated file to the contactList.
     /// </summary>
     public List<Contact> GetContactList()
     {

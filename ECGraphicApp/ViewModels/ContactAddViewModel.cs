@@ -6,6 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ECGraphicApp.ViewModels;
 
+
+/// <summary>
+/// Using the serviceprovider for dependency injection. 
+/// Creates a new instance of contact, and lets the user save it to the list using SaveContact method. After added to the list, the viewmodel will change.
+/// </summary>
 public partial class ContactAddViewModel : ObservableObject
 {
     private readonly IServiceProvider _serviceProvider;

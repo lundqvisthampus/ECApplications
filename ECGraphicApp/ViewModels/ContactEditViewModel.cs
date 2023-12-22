@@ -6,6 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ECGraphicApp.ViewModels;
 
+
+/// <summary>
+/// Using the serviceprovider for dependency injection. 
+/// Lets the user update the contact info using the Update method. After updating, the viewmodel will change.
+/// </summary>
 public partial class ContactEditViewModel : ObservableObject
 {
     private readonly IServiceProvider _serviceProvider;

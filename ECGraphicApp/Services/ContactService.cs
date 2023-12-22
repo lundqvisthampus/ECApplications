@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace ECGraphicApp.Services;
 
 /// <summary>
-/// Field with a filepath passed as an argument and initializing a new Fileservice.
+/// Initialacing a new instace of Fileservice with a filepath as parameter.
 /// </summary>
 public class ContactService : IContactService
 {
@@ -15,7 +15,7 @@ public class ContactService : IContactService
 
 
     /// <summary>
-    /// Method that tries to add the contact to contactList when called.
+    /// Method that tries to add the contact to contactList when called as long as Firstname, lastname and email isnt null or whitespace. Else an error will be displayed in the output.
     /// Also tries to convert the contactlist to Json and calls the SaveContentToFile method to save.
     /// </summary>
     public void AddContact(Contact contact)
@@ -36,7 +36,7 @@ public class ContactService : IContactService
     }
 
     /// <summary>
-    /// Tries to use the GetContentFromFile method, if the file isnt an empty string or null, it converts the Jsonformated file to the contactList.
+    /// Tries to use the GetContentFromFile method and save it as "content" and if the file isnt an empty string or null, it converts the Jsonformated file to the contactList.
     /// </summary>
     public List<Contact> GetContactList()
     {
@@ -63,7 +63,11 @@ public class ContactService : IContactService
     }
 
 
-
+    /// <summary>
+    /// Lets the user update the information for the contact. Firstname, lastname and email is required to not be empty.
+    /// Then adds the updated contact to the list, and removes the old one.
+    /// If the required inputs are invalid, the output will display an error message. 
+    /// </summary>
     public void UpdateContact(Contact contact)
     {
 

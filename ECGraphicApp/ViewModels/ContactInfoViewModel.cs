@@ -6,6 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ECGraphicApp.ViewModels;
 
+/// <summary>
+/// Using the serviceprovider for dependency injection. 
+/// Lets the user view all properties of the Contact class.
+/// 
+/// BackToList method lets the user change the viewmodel back to the list view.
+/// </summary>
 public partial class ContactInfoViewModel : ObservableObject
 {
     private readonly IServiceProvider _serviceProvider;
