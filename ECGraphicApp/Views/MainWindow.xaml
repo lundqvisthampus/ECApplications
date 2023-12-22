@@ -9,7 +9,8 @@
         xmlns:views="clr-namespace:ECGraphicApp.Views"
         
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="Contact App" Height="650" Width="430"
+        >
     
     <Grid>
 

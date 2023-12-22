@@ -62,18 +62,7 @@ public class ContactService : IContactService
         fileService.SaveContentToFile(JsonConvert.SerializeObject(contactList));
     }
 
-    public Contact ShowContactInfo(Contact contact)
-    {
-        var specificContact = contactList.FirstOrDefault(x => x.LastName == contact.LastName);
-        if (specificContact != null)
-        {
-            return specificContact;
-        }
-        else
-        {
-            return null!;
-        }
-    }
+
 
     public void UpdateContact(Contact contact)
     {

@@ -9,5 +9,7 @@ internal interface IContactService
     public List<Contact> GetContactList();
 
     public void RemoveContact(Contact contact);
-    Contact ShowContactInfo(Contact contact);
+
+    public void UpdateContact(Contact contact);
+
 }

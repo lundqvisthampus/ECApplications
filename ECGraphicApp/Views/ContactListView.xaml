@@ -10,7 +10,7 @@
              d:DataContext="{d:DesignInstance Type=viewmodels:ContactListViewModel}"
              
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="400">
+             d:DesignHeight="650" d:DesignWidth="430">
     
     
     <Grid>
@@ -26,8 +26,8 @@
                 <DataTemplate DataType="{x:Type models:Contact}">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Column="0" Orientation="Horizontal">
@@ -36,9 +36,9 @@
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Button Background="#8dcfe3" Padding="10,0" Margin="0,5,8,0" Content="Info" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateToInfoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
-                            <Button Background="#cce38d" Padding="10,0" Margin="0,5,8,0" Content="Edit" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateEditCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
-                            <Button Background="#e38e8d" Padding="10,0" Margin="0,5,14,0" Content="Remove" CommandParameter="{Binding .}" Command="{Binding DataContext.RemoveContactCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#8dd0f7" Padding="10,0" Margin="0,5,8,0" Content="Info" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateToInfoCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#f7f68d" Padding="10,0" Margin="0,5,8,0" Content="Edit" CommandParameter="{Binding .}" Command="{Binding DataContext.NavigateEditCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            <Button Background="#f78d8d" Padding="10,0" Margin="0,5,14,0" Content="Remove" CommandParameter="{Binding .}" Command="{Binding DataContext.RemoveContactCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

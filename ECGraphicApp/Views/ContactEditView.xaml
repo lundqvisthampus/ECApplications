@@ -10,7 +10,7 @@
              d:DataContext="{d:DesignInstance Type=viewmodels:ContactEditViewModel}"
              
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="400">
+             d:DesignHeight="650" d:DesignWidth="430">
     <Grid>
         <StackPanel Margin="0,30">
 
