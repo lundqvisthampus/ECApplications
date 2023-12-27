@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECConsoleApp.Tests", "ECCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECGraphicApp", "ECGraphicApp\ECGraphicApp.csproj", "{9918E971-9D7B-4B6C-BFB1-962E914E82BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECGraphicApp.Tests", "ECGraphicApp.Tests\ECGraphicApp.Tests.csproj", "{9B0CC15B-4137-4E25-AA20-3D46B54E18A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9918E971-9D7B-4B6C-BFB1-962E914E82BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9918E971-9D7B-4B6C-BFB1-962E914E82BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9918E971-9D7B-4B6C-BFB1-962E914E82BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0CC15B-4137-4E25-AA20-3D46B54E18A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0CC15B-4137-4E25-AA20-3D46B54E18A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0CC15B-4137-4E25-AA20-3D46B54E18A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0CC15B-4137-4E25-AA20-3D46B54E18A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
