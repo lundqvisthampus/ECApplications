@@ -10,7 +10,7 @@ public class FileService_Tests
     {
         // Arrange
         string content = "Test";
-        string filePath = @"C:\Coding\Test\Test.txt";
+        string filePath = @"C:\Coding\EC-code\CSharp\ECApplications\Test.txt";
         FileService fileService = new FileService(filePath);
 
         // Act

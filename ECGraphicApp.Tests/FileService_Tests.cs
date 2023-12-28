@@ -9,7 +9,7 @@ public class FileService_Tests
     public void GetContentFromFileShould_GetContentFromFile_ThenReturnContent()
     {
         // Arrange
-        string filePath = @"C:\Coding\Test\Test.txt";
+        string filePath = @"C:\Coding\EC-code\CSharp\ECApplications\Test.txt";
         FileService fileService = new FileService(filePath);
 
         // Act
