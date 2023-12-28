@@ -1,7 +1,7 @@
 ﻿namespace ECGraphicApp.Interfaces;
 
 /// <summary>
-/// Interface for the contact class. "Contract" that the class has to follow.
+/// Interface for the contact class. Like a "ontract" that the class has to follow/implement.
 /// </summary>
 public interface IContact
 {

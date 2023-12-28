@@ -8,7 +8,7 @@ using System.Windows;
 namespace ECGraphicApp;
 
 /// <summary>
-/// Using dependency injection to make sure that the same instance of the viewmodels is used everywhere it is needed.
+/// Using dependency injection to make sure that the same instance (singleton) is used everywhere it is needed.
 /// </summary>
 public partial class App : Application
 {
